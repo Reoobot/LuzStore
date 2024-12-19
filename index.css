@@ -1,0 +1,222 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #e8f0fc 0%, #f5f7fa 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    font-family: "Amatic SC", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow:
+        0 0 5px #00ff00,
+        0 0 10px #00ff00,
+        0 0 20px #00ff00,
+        0 0 40px #00ff00;
+}
+
+/* Navbar */
+.navbar1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.navbar1 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar1 ul li {
+    margin: 0 15px;
+}
+
+.navbar1 ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.navbar1 ul li a:hover {
+    color: #00bcd4;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.photo {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .photo {
+        width: 100%;
+        margin-top: 150px;
+        margin-bottom: 200px;
+
+
+        overflow: hidden;
+        text-align: center;
+    }
+}
+
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+    .navbar1 ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        z-index: 1;
+    }
+
+    .navbar1 ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Icon Bar */
+.icon-bar {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icon-bar a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.icon-bar a.whatsapp {
+    background-color: #48b4bc;
+}
+
+.icon-bar a.ropa {
+    background-color: #25D366;
+}
+
+.icon-bar a.facebook {
+    background-color: #4267B2;
+}
+
+.icon-bar a.podcast {
+    background-color: rgb(182, 233, 71);
+}
+
+.icon-bar a.youtube {
+    background-color: #FF0000;
+}
+
+.icon-bar a.bible {
+    background-color: #8b2113;
+}
+
+.icon-bar a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.icon-bar a.podcastt { background-color: #132148; }
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .icon-bar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .icon-bar {
+        position: static;
+    }
+
+    footer {
+        display: block;
+    }
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
